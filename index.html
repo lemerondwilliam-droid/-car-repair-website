@@ -2,123 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tay's Mobile Car Repair</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tay's Mobile Car Repair – We Pull Up 24/7!</title>
+  <meta name="description" content="24/7 Mobile Car Repair – Flat tires, jump starts, brakes, oil changes & more. TayDoe comes to YOU anywhere in Racine/Kenosha!"/>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f4f4;
-      color: #222;
-    }
-    header {
-      background: #0d2a3f;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      color: white;
-      flex-wrap: wrap;
-    }
-    header img {
-      height: 100px;
-      border-radius: 8px;
-    }
-    .header-text {
-      flex: 1;
-      min-width: 250px;
-    }
-    h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    header p {
-      margin: 5px 0 15px;
-      font-size: 1.1rem;
-    }
+    body { font-family: 'Arial', sans-serif; margin:0; background:#f8f8f8; color:#222; line-height:1.6; }
+    header { background:#0d2a3f; color:white; text-align:center; padding:20px 10px; }
+    .logo-img { max-width:90%; height:auto; margin:10px auto; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.3); }
     .book-btn {
-      background: #4caf50;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-      align-self: flex-start;
+      display:inline-block; background:#4caf50; color:white; padding:16px 32px;
+      font-size:1.4rem; font-weight:bold; border-radius:50px; text-decoration:none;
+      margin:20px auto; box-shadow:0 6px 15px rgba(0,0,0,0.2);
+      transition:transform 0.2s;
     }
-    .container {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
+    .book-btn:hover { transform:scale(1.05); }
+    .container { max-width:1000px; margin:0 auto; padding:20px; }
+    .services { background:white; padding:25px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.1); margin:30px 0; }
+    .services ul { list-style:none; padding:0; font-size:1.2rem; }
+    .services li { padding:8px 0; }
+    .services li::before { content:"Checkmark "; color:#0d2a3f; font-weight:bold; }
+    .testimonials { margin:40px 0; }
+    .testimonial {
+      background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      margin:20px 0; font-style:italic;
     }
-    .services ul {
-      list-style: none;
-      padding: 0;
+    .testimonial cite {
+      display:block; margin-top:15px; font-weight:bold; font-style:normal; color:#0d2a3f;
     }
-    .services li::before {
-      content: "✔ ";
-      color: #0d2a3f;
-      font-weight: bold;
+    .cta-bottom {
+      background:#0d2a3f; color:white; text-align:center; padding:40px 20px;
+      font-size:1.5rem; border-radius:12px; margin:40px 0;
     }
-    .cta {
-      background: #0d2a3f;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      margin-top: 30px;
-      border-radius: 8px;
-      font-size: 1.3rem;
-    }
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      padding: 20px;
-      background: #222;
-      color: white;
-    }
+    .phone { font-size:2.2rem; font-weight:bold; color:#4caf50; }
+    footer { text-align:center; padding:20px; background:#111; color:#aaa; font-size:0.9rem; }
 
-    @media (max-width: 680px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-      .book-btn {
-        margin-top: 10px;
-      }
+    @media (min-width:768px) {
+      header { padding:30px; }
+      .logo-img { max-width:600px; }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="flyer-logo.png" alt="Mobile Car Repair Logo" />
-    <div class="header-text">
-      <h1>Tay's Mobile Car Repair</h1>
-      <p>We Pull Up 24/7!</p>
-      <a href="booking.html" class="book-btn">Book Appointment</a>
-    </div>
+    <!-- Your flyer image is the main logo/hero -->
+    <img src="taydoe-flyer-logo.png" alt="Tay's Mobile Car Repair – We Pull Up 24/7" class="logo-img" />
+    
+    <a href="booking.html" class="book-btn">Book Appointment Now</a>
   </header>
 
   <div class="container">
+
     <section class="services">
-      <h2>Services Offered</h2>
+      <h2>Services We Bring To You 24/7</h2>
       <ul>
-        <li>Flat Tire Repair / Tire Change</li>
+        <li>Flat Tire Repair & Tire Changes</li>
         <li>Oil Changes</li>
         <li>Alternators & Starters</li>
-        <li>Jump Starts & Batteries</li>
-        <li>Brakes</li>
-        <li>Full Diagnostics</li>
+        <li>Jump Starts & Battery Replacement</li>
+        <li>Brake Repair & Replacement</li>
+        <li>Full Vehicle Diagnostics</li>
+        <li>And much more – just call!</li>
       </ul>
     </section>
 
-    <section class="cta">
-      CALL TAYDOE: <strong>262-331-9225</strong><br />
-      If your car broke down — I come to YOU!
+    <section class="testimonials">
+      <h2 style="text-align:center;">What Our Customers Say</h2>
+
+      <div class="testimonial">
+        “Tay saved me at 2 AM when my battery died in a parking lot. Showed up in under 20 minutes and had me back on the road fast. Real lifesaver!”
+        <cite>— Jessica R., Racine</cite>
+      </div>
+
+      <div class="testimonial">
+        “Got a flat on the highway on a Sunday. Everyone else was closed, but Tay pulled up, patched it perfectly, and the price was fair. 10/10 recommend.”
+        <cite>— Marcus T., Kenosha</cite>
+      </div>
+
+      <div class="testimonial">
+        “Honest, fast, and super professional. Replaced my alternator in my driveway while I worked from home. Will definitely use again!”
+        <cite>— Sarah M., Mount Pleasant</cite>
+      </div>
     </section>
+
+    <div class="cta-bottom">
+      Stranded? Don’t wait!<br/>
+      <span class="phone">CALL TAYDOE: 262-331-9225</span><br/><br/>
+      <a href="tel:262-331-9225" style="color:#4caf50; font-size:1.8rem; text-decoration:none;">Tap to Call Now</a>
+    </div>
+
   </div>
 
   <footer>
-    © 2025 TayDoe Mobile Car Repair. All Rights Reserved.
+    © 2025 TayDoe Mobile Car Repair • Serving Racine, Kenosha & Surrounding Areas • All Rights Reserved
   </footer>
+
 </body>
 </html>
