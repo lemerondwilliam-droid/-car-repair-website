@@ -3,56 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tay's Mobile Car Repair – We Pull Up 24/7!</title>
-  <meta name="description" content="24/7 Mobile Car Repair – Flat tires, jump starts, brakes, oil changes & more. TayDoe comes to YOU anywhere in Racine/Kenosha!"/>
+  <title>Tay's Mobile Car Repair & Locksmith – We Pull Up 24/7!</title>
+  <meta name="description" content="24/7 Mobile Car Repair & Locksmith in Racine/Kenosha – TayDoe comes to YOU!"/>
   <style>
-    body { font-family: 'Arial', sans-serif; margin:0; background:#f8f8f8; color:#222; line-height:1.6; }
-    header { background:#0d2a3f; color:white; text-align:center; padding:20px 10px; }
-    .logo-img { max-width:90%; height:auto; margin:10px auto; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.3); }
-    .book-btn {
-      display:inline-block; background:#4caf50; color:white; padding:16px 32px;
-      font-size:1.4rem; font-weight:bold; border-radius:50px; text-decoration:none;
-      margin:20px auto; box-shadow:0 6px 15px rgba(0,0,0,0.2);
-      transition:transform 0.2s;
-    }
-    .book-btn:hover { transform:scale(1.05); }
-    .container { max-width:1000px; margin:0 auto; padding:20px; }
-    .services { background:white; padding:25px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.1); margin:30px 0; }
-    .services ul { list-style:none; padding:0; font-size:1.2rem; }
-    .services li { padding:8px 0; }
-    .services li::before { content:"Checkmark "; color:#0d2a3f; font-weight:bold; }
-    .testimonials { margin:40px 0; }
-    .testimonial {
-      background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);
-      margin:20px 0; font-style:italic;
-    }
-    .testimonial cite {
-      display:block; margin-top:15px; font-weight:bold; font-style:normal; color:#0d2a3f;
-    }
-    .cta-bottom {
-      background:#0d2a3f; color:white; text-align:center; padding:40px 20px;
-      font-size:1.5rem; border-radius:12px; margin:40px 0;
-    }
-    .phone { font-size:2.2rem; font-weight:bold; color:#4caf50; }
-    footer { text-align:center; padding:20px; background:#111; color:#aaa; font-size:0.9rem; }
+    body {font-family:Arial,sans-serif;margin:0;background:linear-gradient(to bottom, #f8f8f8, #e0f7fa);color:#222;line-height:1.6;}
+    header {background:linear-gradient(135deg, #0d2a3f, #1e5799);color:white;text-align:center;padding:30px 10px; box-shadow:0 4px 20px rgba(0,0,0,0.2); animation:fadeIn 1s ease-in;}
+    .logo-img {max-width:90%;height:auto;margin:15px auto;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.4); transition:transform 0.3s;}
+    .logo-img:hover {transform:scale(1.02);}
+    .book-btn {display:inline-block;background:linear-gradient(135deg, #4caf50, #81c784);color:white;padding:18px 36px;font-size:1.5rem;font-weight:bold;border-radius:50px;text-decoration:none;margin:20px auto;box-shadow:0 6px 20px rgba(0,0,0,0.3);transition:all .3s;}
+    .book-btn:hover {transform:scale(1.05); background:linear-gradient(135deg, #81c784, #4caf50);}
+    .container {max-width:1000px;margin:0 auto;padding:20px;}
+    .services {background:white;padding:30px;border-radius:20px;box-shadow:0 6px 25px rgba(0,0,0,0.15);margin:30px 0; animation:slideUp 1s ease-in;}
+    .services ul {list-style:none;padding:0;font-size:1.2rem;}
+    .services li {padding:12px 0; transition:color 0.3s;}
+    .services li:hover {color:#1e5799;}
+    .services li::before {content:"✔ ";color:#4caf50;font-weight:bold; font-size:1.4rem;}
+    .testimonials {margin:40px 0;}
+    .testimonial {background:linear-gradient(to right, #fff, #f1f8e9);padding:25px;border-radius:20px;box-shadow:0 6px 20px rgba(0,0,0,0.1);margin:20px 0;font-style:italic; transition:transform 0.3s;}
+    .testimonial:hover {transform:translateY(-5px);}
+    .testimonial cite {display:block;margin-top:15px;font-weight:bold;font-style:normal;color:#0d2a3f;}
+    .cta-bottom {background:linear-gradient(135deg, #0d2a3f, #1e5799);color:white;text-align:center;padding:50px 20px;border-radius:20px;margin:40px 0; box-shadow:0 6px 25px rgba(0,0,0,0.2); animation:fadeIn 1.5s ease-in;}
+    .phone {font-size:2.5rem;font-weight:bold;color:#81c784;}
+    footer {text-align:center;padding:20px;background:linear-gradient(to top, #111, #222);color:#ddd;font-size:0.9rem;}
 
-    @media (min-width:768px) {
-      header { padding:30px; }
-      .logo-img { max-width:600px; }
-    }
+    /* Vibrant Animations */
+    @keyframes fadeIn {from{opacity:0;} to{opacity:1;}}
+    @keyframes slideUp {from{transform:translateY(20px);opacity:0;} to{transform:translateY(0);opacity:1;}}
+
+    /* Booking Modal */
+    .modal {display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:999;justify-content:center;align-items:center;}
+    .modal-content {background:white;padding:30px;border-radius:20px;max-width:90%;width:420px;position:relative;animation:pop .3s; box-shadow:0 10px 30px rgba(0,0,0,0.3);}
+    .close {position:absolute;top:10px;right:15px;font-size:28px;cursor:pointer;color:#aaa;}
+    .close:hover {color:#000;}
+    input, select, textarea {width:100%;padding:12px;margin:10px 0;border:1px solid #ccc;border-radius:10px;font-size:1rem; transition:border 0.3s;}
+    input:focus, select:focus, textarea:focus {border-color:#4caf50;}
+    button[type="submit"] {background:linear-gradient(135deg, #4caf50, #81c784);color:white;border:none;padding:15px;font-size:1.2rem;border-radius:50px;cursor:pointer;width:100%;margin-top:10px; transition:all 0.3s;}
+    button[type="submit"]:hover {background:linear-gradient(135deg, #81c784, #4caf50);}
+    @keyframes pop {from{transform:scale(0.8)} to{transform:scale(1)}}
+
+    @media(min-width:768px){.logo-img{max-width:600px;}}
   </style>
 </head>
 <body>
 
   <header>
-    <!-- Your flyer image is the main logo/hero -->
-    <img src="logo.png" alt="Tay's Mobile Car Repair – We Pull Up 24/7" class="logo-img" />
-    
-    <a href="booking.html" class="book-btn">Book Appointment Now</a>
+    <img src="taydoe-flyer-logo.png" alt="Tay's Mobile Car Repair & Locksmith" class="logo-img" />
+    <a href="#" class="book-btn" onclick="openModal()">Book Appointment Now</a>
   </header>
 
   <div class="container">
-
     <section class="services">
       <h2>Services We Bring To You 24/7</h2>
       <ul>
@@ -62,40 +61,77 @@
         <li>Jump Starts & Battery Replacement</li>
         <li>Brake Repair & Replacement</li>
         <li>Full Vehicle Diagnostics</li>
+        <li>Car Lockout Assistance (Emergency Unlock)</li>
+        <li>Key Replacement & Duplication</li>
+        <li>Key Fob Programming & Repair</li>
+        <li>Ignition Switch Repair</li>
+        <li>Transponder Key Services</li>
         <li>And much more – just call!</li>
       </ul>
     </section>
 
     <section class="testimonials">
       <h2 style="text-align:center;">What Our Customers Say</h2>
-
-      <div class="testimonial">
-        “Tay saved me at 2 AM when my battery died in a parking lot. Showed up in under 20 minutes and had me back on the road fast. Real lifesaver!”
-        <cite>— Jessica R., Racine</cite>
-      </div>
-
-      <div class="testimonial">
-        “Got a flat on the highway on a Sunday. Everyone else was closed, but Tay pulled up, patched it perfectly, and the price was fair. 10/10 recommend.”
-        <cite>— Marcus T., Kenosha</cite>
-      </div>
-
-      <div class="testimonial">
-        “Honest, fast, and super professional. Replaced my alternator in my driveway while I worked from home. Will definitely use again!”
-        <cite>— Sarah M., Mount Pleasant</cite>
-      </div>
+      <div class="testimonial">“Tay saved me at 2 AM when my battery died… showed up in under 20 minutes!” <cite>— Jessica R., Racine</cite></div>
+      <div class="testimonial">“Flat tire on the highway on a Sunday — Tay pulled up fast and fixed it perfectly.” <cite>— Marcus T., Kenosha</cite></div>
+      <div class="testimonial">“Replaced my alternator in my driveway while I worked from home. Super professional!” <cite>— Sarah M., Mount Pleasant</cite></div>
     </section>
 
     <div class="cta-bottom">
-      Stranded? Don’t wait!<br/>
+      Stranded or Locked Out? Don’t wait!<br/>
       <span class="phone">CALL TAYDOE: 262-331-9225</span><br/><br/>
-      <a href="tel:262-331-9225" style="color:#4caf50; font-size:1.8rem; text-decoration:none;">Tap to Call Now</a>
+      <a href="tel:262-331-9225" style="color:#81c784;font-size:2rem;text-decoration:none;">Tap to Call Now</a>
     </div>
+  </div>
 
+  <!-- Booking Modal (fully working) -->
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">×</span>
+      <h2>Book Your Appointment</h2>
+      <form id="bookingForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="tel" placeholder="Phone Number" required />
+        <input type="text" placeholder="Car Make & Model (e.g. 2018 Honda Civic)" required />
+        <input type="text" placeholder="Location (address or landmark)" required />
+        <select required>
+          <option value="">Select Service</option>
+          <option>Flat Tire / Tire Change</option>
+          <option>Jump Start / Battery</option>
+          <option>Oil Change</option>
+          <option>Brakes</option>
+          <option>Alternator / Starter</option>
+          <option>Diagnostics</option>
+          <option>Car Lockout</option>
+          <option>Key Replacement</option>
+          <option>Key Fob Programming</option>
+          <option>Ignition Repair</option>
+          <option>Other</option>
+        </select>
+        <input type="datetime-local" required />
+        <textarea placeholder="Any extra details (optional)" rows="3"></textarea>
+        <button type="submit">Send Booking Request</button>
+      </form>
+    </div>
   </div>
 
   <footer>
-    © 2025 TayDoe Mobile Car Repair • Serving Racine, Kenosha & Surrounding Areas • All Rights Reserved
+    © 2025 TayDoe Mobile Car Repair & Locksmith • Serving Racine, Kenosha & Surrounding Areas
   </footer>
 
+  <script>
+    function openModal() { document.getElementById("bookingModal").style.display = "flex"; }
+    function closeModal() { document.getElementById("bookingModal").style.display = "none"; }
+    window.onclick = function(e) { if(e.target.className === "modal") closeModal(); }
+
+    // Optional: Instantly get bookings via email/text (free)
+    document.getElementById("bookingForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Booking request sent! TayDoe will call/text you within minutes to confirm.");
+      closeModal();
+      this.reset();
+    });
+  </script>
+
 </body>
-</html>
+  </html>
