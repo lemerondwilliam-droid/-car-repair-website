@@ -3,25 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mobile Car Repair - TayDoe</title>
+  <title>Tay's Mobile Car Repair</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; color: #222; }
-    header { background: #0d2a3f; padding: 20px; display: flex; align-items: center; gap: 20px; color: white; }
-    header img { height: 100px; border-radius: 8px; }
-    h1 { margin: 0; font-size: 2rem; }
-    .container { padding: 20px; max-width: 900px; margin: auto; }
-    .services ul { list-style: none; padding: 0; }
-    .services li::before { content: "✔ "; color: #0d2a3f; font-weight: bold; }
-    .cta { background: #0d2a3f; color: white; padding: 20px; text-align: center; margin-top: 30px; border-radius: 8px; font-size: 1.3rem; }
-    footer { text-align: center; margin-top: 40px; padding: 20px; background: #222; color: white; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #222;
+    }
+    header {
+      background: #0d2a3f;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: white;
+      flex-wrap: wrap;
+    }
+    header img {
+      height: 100px;
+      border-radius: 8px;
+    }
+    .header-text {
+      flex: 1;
+      min-width: 250px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    header p {
+      margin: 5px 0 15px;
+      font-size: 1.1rem;
+    }
+    .book-btn {
+      background: #4caf50;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      align-self: flex-start;
+    }
+    .container {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .services ul {
+      list-style: none;
+      padding: 0;
+    }
+    .services li::before {
+      content: "✔ ";
+      color: #0d2a3f;
+      font-weight: bold;
+    }
+    .cta {
+      background: #0d2a3f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 30px;
+      border-radius: 8px;
+      font-size: 1.3rem;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background: #222;
+      color: white;
+    }
+
+    @media (max-width: 680px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .book-btn {
+        margin-top: 10px;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Mobile Car Repair Logo" />
-    <div>
-      <h1>Mobile Car Repair</h1>
+    <img src="flyer-logo.png" alt="Mobile Car Repair Logo" />
+    <div class="header-text">
+      <h1>Tay's Mobile Car Repair</h1>
       <p>We Pull Up 24/7!</p>
+      <a href="booking.html" class="book-btn">Book Appointment</a>
     </div>
   </header>
 
