@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Appointment | Tay's Mobile Car Repair</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #f8f8f8, #e0f7fa);
+      margin: 0;
+      padding: 20px;
+      color: #222;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      animation: fadeIn 0.8s ease-in;
+    }
+
+    h1 {
+      text-align: center;
+      color: #0d2a3f;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 14px;
+      margin: 12px 0;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #4caf50;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      background: linear-gradient(135deg, #4caf50, #81c784);
+      color: white;
+      border: none;
+      padding: 16px;
+      font-size: 1.3rem;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.04);
+    }
+
+    .note {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Book Your Appointment</h1>
+
+    <form id="appointmentForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+      <input type="text" name="car" placeholder="Car Make & Model" required />
+      <input type="text" name="location" placeholder="Service Location" required />
+
+      <select name="service" required>
+        <option value="">Select Service</option>
+        <option>Flat Tire / Tire Change</option>
+        <option>Jump Start / Battery</option>
+        <option>Oil Change</option>
+        <option>Brakes</option>
+        <option>Alternator / Starter</option>
+        <option>Diagnostics</option>
+        <option>Car Lockout</option>
+        <option>Other</option>
+      </select>
+
+      <input type="datetime-local" name="date" required />
+      <textarea name="details" placeholder="Additional details (optional)" rows="4"></textarea>
+
+      <button type="submit">Send Booking Request</button>
+    </form>
+
+    <div class="note">
+      Your email app will open to send the request.
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("appointmentForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const f = e.target;
+
+      const emailBody =
+`New Appointment Request – Tay's Mobile Car Repair
+
+Name: ${f.name.value}
+Phone: ${f.phone.value}
+Car: ${f.car.value}
+Location: ${f.location.value}
+Service: ${f.service.value}
+Preferred Date/Time: ${f.date.value}
+
+Extra Details:
+${f.details.value}
+`;
+
+      const mailtoLink =
+        "mailto:jariontayjones@gmail.com" +
+        "?subject=" + encodeURIComponent("New Appointment Request") +
+        "&body=" + encodeURIComponent(emailBody);
+
+      window.location.href = mailtoLink;
+    });
+  </script>
+
+</body>
+  </html>
+  
