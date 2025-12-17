@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>About Us | Tay’s Mobile Car Repair & Locksmith | Racine & Kenosha</title>
-  <meta name="description" content="Learn why Tay’s Mobile Car Repair & Locksmith is Racine and Kenosha’s trusted 24/7 mobile mechanic and locksmith. Fast, professional, and reliable service that comes to you." />
+
+  <meta name="description" content="Tay’s Mobile Car Repair & Locksmith provides trusted 24/7 mobile auto repair and locksmith services in Racine & Kenosha. Fast, honest, on-site service." />
+
+  <!-- SEO -->
+  <meta name="keywords" content="Mobile car repair Racine, Mobile mechanic Kenosha, Emergency locksmith Racine, On-site auto repair">
 
   <style>
     body {
@@ -14,180 +19,219 @@
       color: #222;
       line-height: 1.6;
     }
+
     a { text-decoration: none; }
-    .container { max-width: 1000px; margin: auto; padding: 30px 20px; }
-    h1, h2 { color: #0d2a3f; margin-bottom: 20px; }
+    a:focus { outline: 3px solid #4caf50; }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    h1, h2, h3 { color: #0d2a3f; }
+
+    /* NAV */
     .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
       background: #0d2a3f;
       padding: 15px 20px;
       text-align: center;
-      border-radius: 0 0 15px 15px;
-      margin-bottom: 40px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
+
     .nav a {
       color: #fff;
       font-weight: bold;
       margin: 0 15px;
       font-size: 1rem;
     }
+
+    /* HERO */
     .hero {
       text-align: center;
       background: linear-gradient(135deg, #0d2a3f, #1e5799);
       color: white;
-      padding: 50px 20px;
-      border-radius: 20px;
-      box-shadow: 0 6px 25px rgba(0,0,0,0.2);
-      margin-bottom: 40px;
+      padding: 60px 20px;
+      border-radius: 25px;
+      margin-bottom: 50px;
     }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
     .hero a {
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 25px;
       background: linear-gradient(135deg, #4caf50, #81c784);
       color: white;
-      padding: 16px 32px;
-      font-size: 1.3rem;
+      padding: 18px 36px;
+      font-size: 1.4rem;
       font-weight: bold;
       border-radius: 50px;
-      transition: transform 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    .hero a:hover { transform: scale(1.05); }
+
+    .hero a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    }
+
+    /* SECTIONS */
     .section {
       background: white;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 6px 25px rgba(0,0,0,0.1);
-      margin-bottom: 40px;
+      padding: 35px;
+      border-radius: 25px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.12);
+      margin-bottom: 50px;
     }
-    .section p { margin-bottom: 15px; }
+
+    ul { font-size: 1.1rem; }
+
+    /* PHOTOS */
     .photos {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
-      margin-top: 20px;
+      margin-top: 25px;
     }
-    .photos div {
-      background: #ddd;
-      height: 180px;
-      border-radius: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      color: #555;
-      transition: transform 0.2s;
+
+    .photos img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 18px;
     }
-    .photos div:hover { transform: scale(1.05); }
+
+    /* BADGES */
     .badges {
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
-      margin-top: 20px;
+      margin-top: 25px;
     }
+
     .badge {
       background: #eaf4ff;
       color: #1a73e8;
-      padding: 10px 16px;
+      padding: 10px 18px;
       border-radius: 20px;
-      font-size: 0.95rem;
       font-weight: bold;
+      font-size: 0.95rem;
     }
+
+    /* TESTIMONIALS */
+    .testimonials {
+      display: grid;
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .testimonial {
+      background: #f4f9ff;
+      padding: 20px;
+      border-left: 6px solid #1e5799;
+      border-radius: 15px;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      background: #0d2a3f;
+      color: white;
+      margin-top: 60px;
+    }
+
+    footer a { color: #81c784; font-weight: bold; }
   </style>
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
-  <div class="nav">
-    <a href="index.html">🏠 Home</a>
-    <a href="About.html">About Us</a>
+  <!-- NAV -->
+  <nav class="nav" aria-label="Main Navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
     <a href="Appointment.html">Book Appointment</a>
     <a href="tel:262-331-9225">Call Now</a>
-  </div>
+  </nav>
 
-  <div class="container">
+  <main class="container">
 
     <!-- HERO -->
-    <div class="hero">
+    <section class="hero">
       <h1>Tay’s Mobile Car Repair & Locksmith</h1>
-      <p style="font-size:1.3rem;max-width:800px;margin:auto;">
-        Racine & Kenosha’s trusted <strong>24/7 mobile mechanic and locksmith</strong>.
-        We come to you — fast, professional, and prepared.
+      <p>
+        Trusted <strong>24/7 mobile mechanic & locksmith</strong> serving
+        <strong>Racine, Kenosha & nearby areas</strong>.
+        We come to you — fast and professional.
       </p>
-      <a href="tel:262-331-9225">📞 Call Now for Immediate Service</a>
-    </div>
+      <a href="tel:262-331-9225">📞 Call Now for Immediate Help</a>
+    </section>
 
-    <!-- WHO WE ARE -->
-    <div class="section">
+    <!-- ABOUT -->
+    <section class="section">
       <h2>Who We Are</h2>
       <p>
-        Tay’s Mobile Car Repair & Locksmith proudly serves drivers throughout
-        <strong>Racine, Kenosha, Mount Pleasant, and surrounding areas</strong>.
-        We specialize in on-site automotive repair and emergency locksmith services —
-        eliminating the need for towing or long wait times.
+        Tay’s Mobile Car Repair & Locksmith provides reliable on-site auto repair
+        and emergency locksmith services. No towing. No waiting rooms.
       </p>
       <p>
-        Our mission is simple: <strong>deliver fast, honest, high-quality service
-        wherever your vehicle is located</strong>.
+        Our mission is simple: <strong>honest pricing, fast response,
+        and quality work done where you are.</strong>
       </p>
-    </div>
+    </section>
 
-    <!-- WHY TRUST US -->
-    <div class="section">
-      <h2>Why Local Drivers Trust TayDoe</h2>
-      <ul style="font-size:1.1rem;">
-        <li>✔ 24/7 Emergency Mobile Car Repair & Locksmith</li>
-        <li>✔ Rapid response throughout Racine & Kenosha</li>
-        <li>✔ Professional diagnostics and repairs on-site</li>
-        <li>✔ Clear pricing and honest recommendations</li>
-        <li>✔ Residential, workplace, and roadside service</li>
+    <!-- TRUST -->
+    <section class="section">
+      <h2>Why Local Drivers Trust Us</h2>
+      <ul>
+        <li>✔ 24/7 emergency service</li>
+        <li>✔ Mobile mechanic & locksmith</li>
+        <li>✔ Transparent pricing</li>
+        <li>✔ Residential, roadside & workplace service</li>
       </ul>
 
       <div class="badges">
         <div class="badge">✔ Verified Local Business</div>
-        <div class="badge">✔ 5-Star Customer Service</div>
-        <div class="badge">✔ Emergency & Scheduled Service</div>
-        <div class="badge">✔ Trusted Mobile Mechanic</div>
+        <div class="badge">✔ 5-Star Customer Care</div>
+        <div class="badge">✔ Fast Response</div>
       </div>
-    </div>
+    </section>
 
     <!-- PHOTOS -->
-    <div class="section">
+    <section class="section">
       <h2>Real Service. Real Results.</h2>
-      <p>
-        We take pride in showing up prepared and getting the job done right the first time.
-        (Replace these placeholders with real photos for even stronger trust.)
-      </p>
-
       <div class="photos">
-        <div>📸 Service Vehicle</div>
-        <div>📸 On-Site Repair</div>
-        <div>📸 Customer Assistance</div>
+        <img src="images/service-vehicle.jpg" alt="Tay's mobile service vehicle">
+        <img src="images/on-site-repair.jpg" alt="On-site car repair service">
+        <img src="images/customer-help.jpg" alt="Helping a customer roadside">
       </div>
-    </div>
+    </section>
 
-    <!-- IMPROVED CTA -->
-    <div class="cta" style="text-align:center;background:linear-gradient(135deg,#0d2a3f,#1e5799);color:white;padding:60px 20px;border-radius:25px;box-shadow:0 8px 30px rgba(0,0,0,0.3);margin-bottom:40px;">
-      <h2 style="font-size:2.2rem;margin-bottom:20px;">🚗 Need Help RIGHT NOW?</h2>
-      <p style="font-size:1.3rem;max-width:700px;margin:0 auto 30px;">
-        Flat tire, dead battery, locked out, or car won’t start?<br>
-        <strong>TayDoe comes to YOU — 24/7, fast, and reliable service.</strong>
-      </p>
-
-      <!-- Buttons -->
-      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-bottom:30px;">
-        <a href="tel:262-331-9225" style="background:linear-gradient(135deg,#4caf50,#81c784);color:white;padding:18px 40px;font-size:1.5rem;font-weight:bold;border-radius:50px;box-shadow:0 6px 20px rgba(0,0,0,0.3);transition:all 0.3s;">📞 Call Now</a>
-        <a href="Appointment.html" style="background:linear-gradient(135deg,#ff9800,#ffb74d);color:white;padding:18px 40px;font-size:1.5rem;font-weight:bold;border-radius:50px;box-shadow:0 6px 20px rgba(0,0,0,0.3);transition:all 0.3s;">📅 Book Appointment</a>
+    <!-- TESTIMONIALS -->
+    <section class="section">
+      <h2>What Customers Say</h2>
+      <div class="testimonials">
+        <div class="testimonial">⭐⭐⭐⭐⭐ “Showed up fast and fixed my car on-site. Highly recommend!”</div>
+        <div class="testimonial">⭐⭐⭐⭐⭐ “Locked my keys in the car — he arrived in minutes.”</div>
       </div>
+    </section>
 
-      <p style="font-size:1rem;opacity:0.85;margin-bottom:5px;">
-        Serving <strong>Racine, Kenosha & surrounding areas</strong>
-      </p>
-      <p style="font-size:0.9rem;opacity:0.8;">Average response time under 30 minutes — we come to you!</p>
-    </div>
+  </main>
 
-  </div>
+  <!-- FOOTER -->
+  <footer>
+    <p>📍 Serving Racine & Kenosha • ⏱ 24/7 Service</p>
+    <p>📞 <a href="tel:262-331-9225">262-331-9225</a></p>
+    <p>© 2025 Tay’s Mobile Car Repair & Locksmith</p>
+  </footer>
 
 </body>
-  </html>
-        
+</html>
