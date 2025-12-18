@@ -182,7 +182,7 @@
       <h2>Request Your Free Quote</h2>
 
       <!-- NOTE: Replace action="#" with Formspree, Netlify, or backend later -->
-      <form action="#" method="post">
+      <form id="quoteForm">
 
         <label for="name">Full Name *</label>
         <input type="text" id="name" name="name" required>
@@ -233,6 +233,32 @@
     <p>📞 <a href="tel:262-331-9225">262-331-9225</a></p>
     <p>© 2025 Tay’s Mobile Car Repair & Locksmith</p>
   </footer>
+<script>
+  document.getElementById("quoteForm").addEventListener("submit", function (e) {
+    e.preventDefault();
 
+    const f = e.target;
+
+    const emailBody =
+`New Free Quote Request – Tay’s Mobile Car Repair & Locksmith
+
+Name: ${f.name.value}
+Phone: ${f.phone.value}
+Location: ${f.location.value}
+Service Needed: ${f.service.value}
+
+Issue Description:
+${f.details.value}
+`;
+
+    const mailtoLink =
+      "mailto:jariontayjones@gmail.com" +
+      "?subject=" + encodeURIComponent("New Free Quote Request") +
+      "&body=" + encodeURIComponent(emailBody);
+
+    window.location.href = mailtoLink;
+  });
+</script>
+          
 </body>
 </html>
