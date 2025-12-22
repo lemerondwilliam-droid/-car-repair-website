@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Join the Crew | Tay’s Mobile Car Repair</title>
+
+  <meta name="description" content="Join the crew at Tay’s Mobile Car Repair. We’re hiring reliable mobile auto repair techs and helpers in Racine & Kenosha." />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom, #f8f8f8, #e0f7fa);
+      color: #222;
+    }
+
+    a { text-decoration: none; }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    h1, h2 {
+      color: #0d2a3f;
+    }
+
+    /* NAV */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #0d2a3f;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .nav a {
+      color: #fff;
+      font-weight: bold;
+      margin: 0 15px;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      background: linear-gradient(135deg, #0d2a3f, #1e5799);
+      color: white;
+      padding: 60px 20px;
+      border-radius: 25px;
+      margin-bottom: 40px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 15px auto 0;
+    }
+
+    .back-home {
+      margin-top: 15px;
+    }
+
+    .back-home a {
+      color: #81c784;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    /* CARDS */
+    .card {
+      background: white;
+      padding: 35px;
+      border-radius: 25px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+      margin-bottom: 40px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    /* FORM */
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 6px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 30px;
+      width: 100%;
+      background: linear-gradient(135deg, #4caf50, #81c784);
+      color: white;
+      padding: 18px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      background: #0d2a3f;
+      color: white;
+      padding: 30px 15px;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #81c784;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV BAR -->
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="quote.html">Free Quote</a>
+    <a href="join-the-crew.html">Join the Crew</a>
+    <a href="tel:262-331-9225">Call Now</a>
+  </nav>
+
+  <main class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Join the Crew</h1>
+
+      <div class="back-home">
+        <a href="index.html">← Back to Home</a>
+      </div>
+
+      <p>
+        We’re growing fast and looking for dependable people who take pride in their work.
+        If you’re reliable, motivated, and want flexible income — we want to hear from you.
+      </p>
+    </section>
+
+    <!-- WHY WORK WITH US -->
+    <section class="card">
+      <h2>Why Work With Tay’s Mobile Car Repair?</h2>
+      <ul>
+        <li>✔ Flexible schedule</li>
+        <li>✔ Competitive pay per job</li>
+        <li>✔ Steady local work</li>
+        <li>✔ No shop politics — just honest work</li>
+        <li>✔ Opportunity to grow with the company</li>
+      </ul>
+    </section>
+
+    <!-- WHO WE WANT -->
+    <section class="card">
+      <h2>Who We’re Looking For</h2>
+      <ul>
+        <li>Mobile auto repair technicians</li>
+        <li>Locksmith experience (a plus)</li>
+        <li>Roadside assistance helpers</li>
+        <li>Reliable drivers with tools preferred</li>
+      </ul>
+
+      <p><strong>You must:</strong></p>
+      <ul>
+        <li>Be dependable and professional</li>
+        <li>Communicate clearly with customers</li>
+        <li>Have reliable transportation</li>
+        <li>Be comfortable working mobile / outdoors</li>
+      </ul>
+    </section>
+
+    <!-- APPLICATION FORM -->
+    <section class="card">
+      <h2>Apply to Join the Crew</h2>
+
+      <form id="crewForm">
+
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="city">City *</label>
+        <input type="text" id="city" name="city" required>
+
+        <label for="role">Position Interested In *</label>
+        <select id="role" name="role" required>
+          <option value="">-- Select --</option>
+          <option>Mobile Auto Repair Tech</option>
+          <option>Roadside Assistance</option>
+          <option>Locksmith</option>
+          <option>Helper / Apprentice</option>
+        </select>
+
+        <label for="experience">Brief Experience Description *</label>
+        <textarea id="experience" name="experience" placeholder="Tell us about your experience, tools, and availability…" required></textarea>
+
+        <button type="submit">🚀 Apply Now</button>
+      </form>
+
+      <p style="margin-top:15px; font-size:0.9rem; color:#555;">
+        Serious applicants only. Qualified candidates will be contacted.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>📍 Serving Racine & Kenosha • ⏱ 24/7 Mobile Service</p>
+    <p>📞 <a href="tel:262-331-9225">262-331-9225</a></p>
+    <p>© 2025 Tay’s Mobile Car Repair</p>
+  </footer>
+
+  <!-- EMAIL HANDLER -->
+  <script>
+    document.getElementById("crewForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const f = e.target;
+
+      const body =
+`New Crew Application – Tay’s Mobile Car Repair
+
+Name: ${f.name.value}
+Phone: ${f.phone.value}
+City: ${f.city.value}
+Position: ${f.role.value}
+
+Experience:
+${f.experience.value}
+`;
+
+      window.location.href =
+        "mailto:jariontayjones@gmail.com" +
+        "?subject=" + encodeURIComponent("New Crew Application") +
+        "&body=" + encodeURIComponent(body);
+    });
+  </script>
+
+</body>
+  </html>
+  
